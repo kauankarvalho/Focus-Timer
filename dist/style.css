@@ -533,3 +533,68 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+
+.absolute {
+  position: absolute;
+}
+
+.right-\[3\.2rem\] {
+  right: 3.2rem;
+}
+
+.top-\[3\.2rem\] {
+  top: 3.2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-\[3\.2rem\] {
+  height: 3.2rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-\[3\.2rem\] {
+  width: 3.2rem;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.bg-\[url\(\.\.\/src\/assets\/moon\.svg\)\] {
+  background-image: url(../src/assets/moon.svg);
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.font-roboto {
+  font-family: Roboto, sans-serif;
+}
+
+.text-\[62\.5\%\] {
+  font-size: 62.5%;
+}
+
+.text-\[9\.6rem\]\/\[11\.3rem\] {
+  font-size: 9.6rem;
+  line-height: 11.3rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}

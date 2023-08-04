@@ -1,15 +1,36 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br" class="font-roboto text-[62.5%]">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Temporizador estilo pomodoro." />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./dist/style.css" />
 
-    <link rel="icon" href="./src/assets/favicon.png" type="image/png" />
+    <link rel="icon" href="./src/assets/favicon.svg" type="image/xml+svg" />
     <title>Focus Timer</title>
   </head>
 
-  <body></body>
+  <body class="h-screen">
+    <main class="flex h-full items-center justify-center">
+      <button
+        class="absolute right-[3.2rem] top-[3.2rem] h-[3.2rem] w-[3.2rem] bg-[url(../src/assets/moon.svg)] bg-no-repeat"
+      ></button>
+
+      <section>
+        <section id="timer" class="text-[9.6rem]/[11.3rem] font-bold flex">
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </section>
+      </section>
+    </main>
+  </body>
 </html>
