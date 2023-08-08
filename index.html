@@ -24,11 +24,23 @@
         class="absolute right-[3.2rem] top-[3.2rem] h-[3.2rem] w-[3.2rem] bg-[url(../src/assets/moon.svg)] bg-no-repeat"
       ></button>
 
-      <section>
-        <section id="timer" class="text-[9.6rem]/[11.3rem] font-bold flex">
+      <section class="flex flex-col gap-[1.6rem]">
+        <section
+          id="timer-number"
+          class="flex justify-center text-[9.6rem]/[11.3rem] font-bold"
+        >
           <span id="minutes">00</span>
           <span>:</span>
           <span id="seconds">00</span>
+        </section>
+
+        <section
+          id="controls"
+          class="flex justify-center gap-[1.6rem] rounded-[999.9rem] bg-[#242424] px-[4rem] py-[2.2rem]"
+        >
+          <button id="play/pause" class="pause"></button>
+          <button id="timer" class="stop"></button>
+          <button id="speaker" class="speaker-none"></button>
         </section>
       </section>
     </main>

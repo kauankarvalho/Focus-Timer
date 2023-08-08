@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html"],
+  safelist: ["play", "pause", "timer", "stop", "speaker-none", "speaker-high"],
   theme: {
     fontFamily: {
       roboto: ["Roboto", "sans-serif"],

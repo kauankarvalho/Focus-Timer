@@ -566,6 +566,10 @@ video {
   width: 3.2rem;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .items-center {
   align-items: center;
 }
@@ -574,12 +578,35 @@ video {
   justify-content: center;
 }
 
+.gap-\[1\.6rem\] {
+  gap: 1.6rem;
+}
+
+.rounded-\[999\.9rem\] {
+  border-radius: 999.9rem;
+}
+
+.bg-\[\#242424\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 36 36 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\.\.\/src\/assets\/moon\.svg\)\] {
   background-image: url(../src/assets/moon.svg);
 }
 
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+
+.px-\[4rem\] {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.py-\[2\.2rem\] {
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
 }
 
 .font-roboto {
@@ -597,4 +624,40 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.play {
+  height: 6.4rem;
+  width: 6.4rem;
+  background-image: url(../src/assets/play.svg);
+}
+
+.pause {
+  height: 6.4rem;
+  width: 6.4rem;
+  background-image: url(../src/assets/pause.svg);
+}
+
+.timer {
+  height: 6.4rem;
+  width: 6.4rem;
+  background-image: url(../src/assets/timer.svg);
+}
+
+.stop {
+  height: 6.4rem;
+  width: 6.4rem;
+  background-image: url(../src/assets/stop.svg);
+}
+
+.speaker-none {
+  height: 6.4rem;
+  width: 6.4rem;
+  background-image: url(../src/assets/speaker-none.svg);
+}
+
+.speaker-high {
+  height: 6.4rem;
+  width: 6.4rem;
+  background-image: url(../src/assets/speaker-high.svg);
 }
