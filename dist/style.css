@@ -591,6 +591,11 @@ video {
   background-color: rgb(36 36 36 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#F8F8FC\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 248 252 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\.\.\/src\/assets\/moon\.svg\)\] {
   background-image: url(../src/assets/moon.svg);
 }
@@ -624,6 +629,11 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.text-\[\#121214\] {
+  --tw-text-opacity: 1;
+  color: rgb(18 18 20 / var(--tw-text-opacity));
 }
 
 .play {
@@ -660,4 +670,18 @@ video {
   height: 6.4rem;
   width: 6.4rem;
   background-image: url(../src/assets/speaker-high.svg);
+}
+
+:is(.dark .dark\:bg-\[\#121214\]) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 18 20 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-\[url\(\.\.\/src\/assets\/sun\.svg\)\]) {
+  background-image: url(../src/assets/sun.svg);
+}
+
+:is(.dark .dark\:text-\[\#F8F8FC\]) {
+  --tw-text-opacity: 1;
+  color: rgb(248 248 252 / var(--tw-text-opacity));
 }
