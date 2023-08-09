@@ -21,7 +21,9 @@
     <main class="flex h-full items-center justify-center">
       <button
         class="js-theme-button absolute right-[3.2rem] top-[3.2rem] h-[3.2rem] w-[3.2rem] bg-[url(../src/assets/moon.svg)] bg-no-repeat dark:bg-[url(../src/assets/sun.svg)]"
-      ></button>
+      >
+        <span class="sr-only">Ativar tema escuro.</span>
+      </button>
 
       <section class="flex flex-col gap-[1.6rem]">
         <section
@@ -37,9 +39,17 @@
           id="controls"
           class="flex justify-center gap-[1.6rem] rounded-[999.9rem] bg-[#242424] px-[4rem] py-[2.2rem]"
         >
-          <button id="play/pause" class="pause"></button>
-          <button id="timer" class="stop"></button>
-          <button id="speaker" class="speaker-none"></button>
+          <button id="play/pause" class="play">
+            <span class="sr-only">Iniciar contador.</span>
+          </button>
+
+          <button id="timer" class="timer">
+            <span class="sr-only">Ajustar contador.</span>
+          </button>
+
+          <button id="speaker" class="speaker-none">
+            <span class="sr-only">Iniciar música.</span>
+          </button>
         </section>
       </section>
     </main>
