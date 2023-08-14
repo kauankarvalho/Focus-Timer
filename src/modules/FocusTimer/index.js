@@ -1,2 +1,5 @@
-import { timerNumber } from "./timer-number.js"
-import { controls } from "./controls.js"
+import { actions } from "./actions.js"
+
+export function FocusTimer() {
+  actions()
+}
