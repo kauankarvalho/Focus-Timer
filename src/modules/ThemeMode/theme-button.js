@@ -1,4 +1,4 @@
-import { buttonPressAudio } from "./FocusTimer/sounds.js"
+import { buttonPressAudio } from "../FocusTimer/sounds.js"
 
 export const themeButton = {
   element: document.querySelector(".js-theme-button"),
