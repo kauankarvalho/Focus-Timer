@@ -1,11 +1,6 @@
 import { playAndPause, timer, speaker } from "./controls.js"
+import { toggleClassesOnElement } from "../utils.js"
 import { state } from "./state.js"
-
-function toggleClassesOnElement(array) {
-  for (let i = 1; i < array.length; i++) {
-    array[0].classList.toggle(array[i])
-  }
-}
 
 export function togglePlayAndPause() {
   toggleClassesOnElement(playAndPause)

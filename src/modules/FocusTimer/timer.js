@@ -1,5 +1,6 @@
 import { kitchenTimerAudio } from "./sounds.js"
 import { timerNumber } from "./timer-number.js"
+import { isTwoDigitNumber } from "../utils.js"
 import { state } from "./state.js"
 
 export function updateTimerState(minutes, seconds) {
@@ -23,11 +24,6 @@ export function updateTimerState(minutes, seconds) {
 export function updateDisplay() {
   timerNumber.minutes.innerText = String(state.minutes).padStart(2, "0")
   timerNumber.seconds.innerText = String(state.seconds).padStart(2, "0")
-}
-
-function isTwoDigitNumber(element) {
-  const teste = element.split("")
-  return teste.length === 2
 }
 
 function countdown() {
