@@ -2,10 +2,12 @@ import { playAndPause, timer, speaker } from "./controls.js"
 import { togglePlayAndPause, toggleTimer, toggleSpeaker } from "./actions.js"
 import * as countdown from "./timer.js"
 import { state } from "./state.js"
+import { buttonPressAudio, bgMusicAudio } from "./sounds.js"
 
 export function eventsListeners() {
   playAndPause[0].addEventListener("click", () => {
     if (!countdown.isEditing) {
+      buttonPressAudio.play()
       togglePlayAndPause()
 
       if (state.isRunning) {
@@ -18,6 +20,7 @@ export function eventsListeners() {
 
   timer[0].addEventListener("click", () => {
     if (!countdown.isEditing) {
+      buttonPressAudio.play()
       const isStopElement = timer[0].classList.contains("stop")
 
       if (isStopElement) {
@@ -31,7 +34,14 @@ export function eventsListeners() {
 
   speaker[0].addEventListener("click", () => {
     if (!countdown.isEditing) {
+      buttonPressAudio.play()
       toggleSpeaker()
+
+      if (!state.isMute) {
+        bgMusicAudio.play()
+      } else {
+        bgMusicAudio.pause()
+      }
     }
   })
 }

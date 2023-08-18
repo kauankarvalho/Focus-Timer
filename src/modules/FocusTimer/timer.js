@@ -1,3 +1,4 @@
+import { kitchenTimerAudio } from "./sounds.js"
 import { timerNumber } from "./timer-number.js"
 import { state } from "./state.js"
 
@@ -38,6 +39,7 @@ function countdown() {
   }
 
   if (state.minutes === 0 && state.seconds === 0) {
+    kitchenTimerAudio.play()
     clearInterval(countdownInterval)
   }
 
