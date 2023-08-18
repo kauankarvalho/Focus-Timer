@@ -612,6 +612,14 @@ video {
   background-image: url(../src/assets/icons/moon.svg);
 }
 
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-center {
+  background-position: center;
+}
+
 .bg-no-repeat {
   background-repeat: no-repeat;
 }
@@ -657,36 +665,48 @@ video {
   height: 6.4rem;
   width: 6.4rem;
   background-image: url(../src/assets/icons/play.svg);
+  background-size: contain;
+  background-position: center;
 }
 
 .pause {
   height: 6.4rem;
   width: 6.4rem;
   background-image: url(../src/assets/icons/pause.svg);
+  background-size: contain;
+  background-position: center;
 }
 
 .timer {
   height: 6.4rem;
   width: 6.4rem;
   background-image: url(../src/assets/icons/timer.svg);
+  background-size: contain;
+  background-position: center;
 }
 
 .stop {
   height: 6.4rem;
   width: 6.4rem;
   background-image: url(../src/assets/icons/stop.svg);
+  background-size: contain;
+  background-position: center;
 }
 
 .speaker-none {
   height: 6.4rem;
   width: 6.4rem;
   background-image: url(../src/assets/icons/speaker-none.svg);
+  background-size: contain;
+  background-position: center;
 }
 
 .speaker-high {
   height: 6.4rem;
   width: 6.4rem;
   background-image: url(../src/assets/icons/speaker-high.svg);
+  background-size: contain;
+  background-position: center;
 }
 
 :is(.dark .dark\:bg-\[\#121214\]) {
@@ -701,4 +721,10 @@ video {
 :is(.dark .dark\:text-\[\#F8F8FC\]) {
   --tw-text-opacity: 1;
   color: rgb(248 248 252 / var(--tw-text-opacity));
+}
+
+@media (max-width: 375px) {
+  .max-\[375px\]\:text-\[55\%\] {
+    font-size: 55%;
+  }
 }
