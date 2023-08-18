@@ -1,5 +1,5 @@
-import { state } from "./state.js"
 import { playAndPause, timer, speaker } from "./controls.js"
+import { state } from "./state.js"
 
 function toggleClassesOnElement(array) {
   for (let i = 1; i < array.length; i++) {

@@ -1,8 +1,8 @@
-import { playAndPause, timer, speaker } from "./controls.js"
 import { togglePlayAndPause, toggleTimer, toggleSpeaker } from "./actions.js"
+import { buttonPressAudio, bgMusicAudio } from "./sounds.js"
+import { playAndPause, timer, speaker } from "./controls.js"
 import * as countdown from "./timer.js"
 import { state } from "./state.js"
-import { buttonPressAudio, bgMusicAudio } from "./sounds.js"
 
 export function eventsListeners() {
   playAndPause[0].addEventListener("click", () => {
