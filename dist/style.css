@@ -608,8 +608,8 @@ video {
   background-color: rgb(248 248 252 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\.\.\/src\/assets\/moon\.svg\)\] {
-  background-image: url(../src/assets/moon.svg);
+.bg-\[url\(\.\.\/src\/assets\/icons\/moon\.svg\)\] {
+  background-image: url(../src/assets/icons/moon.svg);
 }
 
 .bg-no-repeat {
@@ -656,37 +656,37 @@ video {
 .play {
   height: 6.4rem;
   width: 6.4rem;
-  background-image: url(../src/assets/play.svg);
+  background-image: url(../src/assets/icons/play.svg);
 }
 
 .pause {
   height: 6.4rem;
   width: 6.4rem;
-  background-image: url(../src/assets/pause.svg);
+  background-image: url(../src/assets/icons/pause.svg);
 }
 
 .timer {
   height: 6.4rem;
   width: 6.4rem;
-  background-image: url(../src/assets/timer.svg);
+  background-image: url(../src/assets/icons/timer.svg);
 }
 
 .stop {
   height: 6.4rem;
   width: 6.4rem;
-  background-image: url(../src/assets/stop.svg);
+  background-image: url(../src/assets/icons/stop.svg);
 }
 
 .speaker-none {
   height: 6.4rem;
   width: 6.4rem;
-  background-image: url(../src/assets/speaker-none.svg);
+  background-image: url(../src/assets/icons/speaker-none.svg);
 }
 
 .speaker-high {
   height: 6.4rem;
   width: 6.4rem;
-  background-image: url(../src/assets/speaker-high.svg);
+  background-image: url(../src/assets/icons/speaker-high.svg);
 }
 
 :is(.dark .dark\:bg-\[\#121214\]) {
@@ -694,8 +694,8 @@ video {
   background-color: rgb(18 18 20 / var(--tw-bg-opacity));
 }
 
-:is(.dark .dark\:bg-\[url\(\.\.\/src\/assets\/sun\.svg\)\]) {
-  background-image: url(../src/assets/sun.svg);
+:is(.dark .dark\:bg-\[url\(\.\.\/src\/assets\/icons\/sun\.svg\)\]) {
+  background-image: url(../src/assets/icons/sun.svg);
 }
 
 :is(.dark .dark\:text-\[\#F8F8FC\]) {

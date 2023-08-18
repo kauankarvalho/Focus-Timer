@@ -4,26 +4,26 @@
 
 @layer utilities {
   .play {
-    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/play.svg)];
+    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/play.svg)];
   }
 
   .pause {
-    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/pause.svg)];
+    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/pause.svg)];
   }
 
   .timer {
-    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/timer.svg)];
+    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/timer.svg)];
   }
 
   .stop {
-    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/stop.svg)];
+    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/stop.svg)];
   }
 
   .speaker-none {
-    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/speaker-none.svg)];
+    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/speaker-none.svg)];
   }
 
   .speaker-high {
-    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/speaker-high.svg)];
+    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/speaker-high.svg)];
   }
 }
