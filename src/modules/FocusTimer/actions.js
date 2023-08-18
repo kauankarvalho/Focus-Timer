@@ -1,7 +1,5 @@
-import { playAndPause, timer, speaker } from "./controls.js"
 import { state } from "./state.js"
-
-let x = true
+import { playAndPause, timer, speaker } from "./controls.js"
 
 function toggleClassesOnElement(array) {
   for (let i = 1; i < array.length; i++) {
@@ -9,36 +7,31 @@ function toggleClassesOnElement(array) {
   }
 }
 
-function togglePlayAndPause() {
+export function togglePlayAndPause() {
   toggleClassesOnElement(playAndPause)
   state.isRunning = !state.isRunning
 
-  if (state.isRunning && x) {
+  const isTimerElement = timer[0].classList.contains("timer")
+
+  if (isTimerElement) {
     toggleClassesOnElement(timer)
-    x = false
   }
 }
 
-function toggleTimer() {
+export function toggleTimer() {
+  const isStopElement = timer[0].classList.contains("stop")
+
   if (state.isRunning) {
     toggleClassesOnElement(timer)
     toggleClassesOnElement(playAndPause)
 
     state.isRunning = !state.isRunning
-    x = !x
-  } else if (!state.isRunning && !x) {
+  } else if (isStopElement) {
     toggleClassesOnElement(timer)
-    x = true
   }
 }
 
-function toggleSpeaker() {
+export function toggleSpeaker() {
   toggleClassesOnElement(speaker)
   state.isMute = !state.isMute
-}
-
-export function actions() {
-  playAndPause[0].addEventListener("click", togglePlayAndPause)
-  timer[0].addEventListener("click", toggleTimer)
-  speaker[0].addEventListener("click", toggleSpeaker)
 }

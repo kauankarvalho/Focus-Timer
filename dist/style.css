@@ -648,6 +648,11 @@ video {
   color: rgb(18 18 20 / var(--tw-text-opacity));
 }
 
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .play {
   height: 6.4rem;
   width: 6.4rem;
