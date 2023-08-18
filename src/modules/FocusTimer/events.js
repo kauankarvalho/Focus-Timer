@@ -4,7 +4,7 @@ import { playAndPause, timer, speaker } from "./controls.js"
 import * as countdown from "./timer.js"
 import { state } from "./state.js"
 
-export function eventsListeners() {
+export function initEventListeners() {
   playAndPause[0].addEventListener("click", () => {
     if (!countdown.isEditing) {
       if (state.minutes !== 0 || state.seconds !== 0) {
