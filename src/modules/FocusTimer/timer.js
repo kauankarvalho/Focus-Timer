@@ -1,3 +1,4 @@
+import { togglePlayAndPause } from "./actions.js"
 import { kitchenTimerAudio } from "./sounds.js"
 import { timerNumber } from "./timer-number.js"
 import { isTwoDigitNumber } from "../utils.js"
@@ -36,6 +37,7 @@ function countdown() {
 
   if (state.minutes === 0 && state.seconds === 0) {
     kitchenTimerAudio.play()
+    togglePlayAndPause()
     clearInterval(countdownInterval)
   }
 

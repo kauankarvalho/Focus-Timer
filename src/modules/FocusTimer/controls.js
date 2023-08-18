@@ -4,11 +4,7 @@ export const playAndPause = [
   "pause",
 ]
 
-export const timer = [
-  document.querySelector("#timer"),
-  "timer",
-  "stop",
-]
+export const timer = [document.querySelector("#timer"), "timer", "stop"]
 
 export const speaker = [
   document.querySelector("#speaker"),

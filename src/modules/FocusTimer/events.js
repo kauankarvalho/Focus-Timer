@@ -7,13 +7,15 @@ import { state } from "./state.js"
 export function eventsListeners() {
   playAndPause[0].addEventListener("click", () => {
     if (!countdown.isEditing) {
-      buttonPressAudio.play()
-      togglePlayAndPause()
+      if (state.minutes !== 0 || state.seconds !== 0) {
+        buttonPressAudio.play()
+        togglePlayAndPause()
 
-      if (state.isRunning) {
-        countdown.startCountdown()
-      } else {
-        countdown.stopCountdown()
+        if (state.isRunning) {
+          countdown.startCountdown()
+        } else {
+          countdown.stopCountdown()
+        }
       }
     }
   })
