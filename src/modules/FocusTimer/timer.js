@@ -86,6 +86,7 @@ export function editCountdown() {
 
   function checkEditing() {
     const minutesElement = timerNumber.minutes
+    const secondsElement = timerNumber.seconds
 
     if (!isEditingMinutes) {
       minutesElement.focus()
@@ -103,7 +104,6 @@ export function editCountdown() {
         isEditingMinutes = true
       }
     } else if (!isEditingSeconds) {
-      const secondsElement = timerNumber.seconds
       secondsElement.focus()
 
       if (Number(minutesElement.innerText) === 60) {
@@ -116,7 +116,6 @@ export function editCountdown() {
         if (Number(secondsElement.innerText) > 45) {
           secondsElement.innerText = "45"
         }
-
         state.defaultSeconds = Number(secondsElement.innerText)
         updateTimerState()
 
