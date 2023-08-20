@@ -1,6 +1,17 @@
-export function toggleClassesOnElement(array) {
-  for (let i = 1; i < array.length; i++) {
-    array[0].classList.toggle(array[i])
+export function updateElementWithToggledClasses(object) {
+  const { element, button_1, button_2 } = object
+
+  element.classList.toggle(button_1.name)
+  element.classList.toggle(button_2.name)
+}
+
+export function updateElementAccessibility(object) {
+  const { element, span, button_1, button_2 } = object
+
+  if (element.classList.contains(button_1.name)) {
+    span.innerText = button_1.accessibility
+  } else {
+    span.innerText = button_2.accessibility
   }
 }
 

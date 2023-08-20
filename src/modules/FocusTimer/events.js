@@ -5,7 +5,7 @@ import * as countdown from "./timer.js"
 import { state } from "./state.js"
 
 export function initEventListeners() {
-  playAndPause[0].addEventListener("click", () => {
+  playAndPause.element.addEventListener("click", () => {
     if (!countdown.isEditing) {
       if (state.minutes !== 0 || state.seconds !== 0) {
         buttonPressAudio.play()
@@ -20,10 +20,10 @@ export function initEventListeners() {
     }
   })
 
-  timer[0].addEventListener("click", () => {
+  timer.element.addEventListener("click", () => {
     if (!countdown.isEditing) {
       buttonPressAudio.play()
-      const isStopElement = timer[0].classList.contains("stop")
+      const isStopElement = timer.element.classList.contains("stop")
 
       if (isStopElement) {
         countdown.resetCountdown()
@@ -34,7 +34,7 @@ export function initEventListeners() {
     }
   })
 
-  speaker[0].addEventListener("click", () => {
+  speaker.element.addEventListener("click", () => {
     if (!countdown.isEditing) {
       buttonPressAudio.play()
       toggleSpeaker()

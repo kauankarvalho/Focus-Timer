@@ -1,32 +1,41 @@
 import { playAndPause, timer, speaker } from "./controls.js"
-import { toggleClassesOnElement } from "../utils.js"
+import * as utils from "../utils.js"
 import { state } from "./state.js"
 
 export function togglePlayAndPause() {
-  toggleClassesOnElement(playAndPause)
+  utils.updateElementWithToggledClasses(playAndPause)
+  utils.updateElementAccessibility(playAndPause)
+
   state.isRunning = !state.isRunning
 
-  const isTimerElement = timer[0].classList.contains("timer")
+  const isTimerElement = timer.element.classList.contains("timer")
 
   if (isTimerElement) {
-    toggleClassesOnElement(timer)
+    utils.updateElementWithToggledClasses(timer)
+    utils.updateElementAccessibility(timer)
   }
 }
 
 export function toggleTimer() {
-  const isStopElement = timer[0].classList.contains("stop")
+  const isStopElement = timer.element.classList.contains("stop")
 
   if (state.isRunning) {
-    toggleClassesOnElement(timer)
-    toggleClassesOnElement(playAndPause)
+    utils.updateElementWithToggledClasses(timer)
+    utils.updateElementAccessibility(timer)
+
+    utils.updateElementWithToggledClasses(playAndPause)
+    utils.updateElementAccessibility(playAndPause)
 
     state.isRunning = !state.isRunning
   } else if (isStopElement) {
-    toggleClassesOnElement(timer)
+    utils.updateElementWithToggledClasses(timer)
+    utils.updateElementAccessibility(timer)
   }
 }
 
 export function toggleSpeaker() {
-  toggleClassesOnElement(speaker)
+  utils.updateElementWithToggledClasses(speaker)
+  utils.updateElementAccessibility(speaker)
+
   state.isMute = !state.isMute
 }
