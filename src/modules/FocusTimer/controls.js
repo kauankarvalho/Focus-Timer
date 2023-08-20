@@ -3,12 +3,12 @@ export const playAndPause = {
   span: document.querySelector("#play-pause span"),
   button_1: {
     name: "play",
-    accessibility: "Iniciar o contador."
+    accessibility: "Iniciar o contador.",
   },
   button_2: {
     name: "pause",
-    accessibility: "Pausar o contador."
-  }
+    accessibility: "Pausar o contador.",
+  },
 }
 
 export const timer = {
