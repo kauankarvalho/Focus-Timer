@@ -11,15 +11,15 @@ export const playAndPause = {
   },
 }
 
-export const timer = {
-  element: document.querySelector("#timer"),
-  span: document.querySelector("#timer span"),
+export const editAndReset = {
+  element: document.querySelector("#edit-reset"),
+  span: document.querySelector("#edit-reset span"),
   button_1: {
-    name: "timer",
+    name: "edit",
     accessibility: "Ajustar o contador.",
   },
   button_2: {
-    name: "stop",
+    name: "reset",
     accessibility: "Reiniciar o  contador.",
   },
 }

@@ -11,12 +11,12 @@
     @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/pause.svg)] bg-center bg-contain;
   }
 
-  .timer {
-    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/timer.svg)] bg-center bg-contain;
+  .edit {
+    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/edit.svg)] bg-center bg-contain;
   }
 
-  .stop {
-    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/stop.svg)] bg-center bg-contain;
+  .reset {
+    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/reset.svg)] bg-center bg-contain;
   }
 
   .speaker-none {

@@ -1,7 +1,7 @@
-import { togglePlayAndPause, toggleTimer, toggleSpeaker } from "./actions.js"
+import { playAndPause, editAndReset, speaker } from "./controls.js"
 import { buttonPressAudio, bgMusicAudio } from "./sounds.js"
-import { playAndPause, timer, speaker } from "./controls.js"
 import * as countdown from "./timer.js"
+import * as action from "./actions.js"
 import { state } from "./state.js"
 
 export function initEventListeners() {
@@ -9,7 +9,7 @@ export function initEventListeners() {
     if (!countdown.isEditing) {
       if (state.minutes !== 0 || state.seconds !== 0) {
         buttonPressAudio.play()
-        togglePlayAndPause()
+        action.togglePlayAndPause()
 
         if (state.isRunning) {
           countdown.startCountdown()
@@ -20,14 +20,14 @@ export function initEventListeners() {
     }
   })
 
-  timer.element.addEventListener("click", () => {
+  editAndReset.element.addEventListener("click", () => {
     if (!countdown.isEditing) {
       buttonPressAudio.play()
-      const isStopElement = timer.element.classList.contains("stop")
+      const isResetButton = editAndReset.element.classList.contains("reset")
 
-      if (isStopElement) {
+      if (isResetButton) {
         countdown.resetCountdown()
-        toggleTimer()
+        action.toggleEditAndReset()
       } else {
         countdown.editCountdown()
       }
@@ -37,7 +37,7 @@ export function initEventListeners() {
   speaker.element.addEventListener("click", () => {
     if (!countdown.isEditing) {
       buttonPressAudio.play()
-      toggleSpeaker()
+      action.toggleSpeaker()
 
       if (!state.isMute) {
         bgMusicAudio.play()

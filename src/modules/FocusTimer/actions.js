@@ -1,4 +1,4 @@
-import { playAndPause, timer, speaker } from "./controls.js"
+import { playAndPause, editAndReset, speaker } from "./controls.js"
 import * as utils from "../utils.js"
 import { state } from "./state.js"
 
@@ -8,28 +8,28 @@ export function togglePlayAndPause() {
 
   state.isRunning = !state.isRunning
 
-  const isTimerElement = timer.element.classList.contains("timer")
+  const isEditButton = editAndReset.element.classList.contains("edit")
 
-  if (isTimerElement) {
-    utils.updateElementWithToggledClasses(timer)
-    utils.updateElementAccessibility(timer)
+  if (isEditButton) {
+    utils.updateElementWithToggledClasses(editAndReset)
+    utils.updateElementAccessibility(editAndReset)
   }
 }
 
-export function toggleTimer() {
-  const isStopElement = timer.element.classList.contains("stop")
+export function toggleEditAndReset() {
+  const isResetButton = editAndReset.element.classList.contains("reset")
 
   if (state.isRunning) {
-    utils.updateElementWithToggledClasses(timer)
-    utils.updateElementAccessibility(timer)
+    utils.updateElementWithToggledClasses(editAndReset)
+    utils.updateElementAccessibility(editAndReset)
 
     utils.updateElementWithToggledClasses(playAndPause)
     utils.updateElementAccessibility(playAndPause)
 
     state.isRunning = !state.isRunning
-  } else if (isStopElement) {
-    utils.updateElementWithToggledClasses(timer)
-    utils.updateElementAccessibility(timer)
+  } else if (isResetButton) {
+    utils.updateElementWithToggledClasses(editAndReset)
+    utils.updateElementAccessibility(editAndReset)
   }
 }
 

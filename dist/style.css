@@ -677,18 +677,18 @@ video {
   background-position: center;
 }
 
-.timer {
+.edit {
   height: 6.4rem;
   width: 6.4rem;
-  background-image: url(../src/assets/icons/timer.svg);
+  background-image: url(../src/assets/icons/edit.svg);
   background-size: contain;
   background-position: center;
 }
 
-.stop {
+.reset {
   height: 6.4rem;
   width: 6.4rem;
-  background-image: url(../src/assets/icons/stop.svg);
+  background-image: url(../src/assets/icons/reset.svg);
   background-size: contain;
   background-position: center;
 }
