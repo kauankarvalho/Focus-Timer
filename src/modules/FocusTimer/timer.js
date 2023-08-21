@@ -9,10 +9,14 @@ export function updateTimerState(minutes, seconds) {
   seconds = seconds ?? state.defaultSeconds
 
   minutes = minutes > 60 ? (minutes = 60) : minutes
-  if (minutes >= 60) {
+  if (minutes == 60) {
+    seconds = 0
+  } else if (minutes === 0) {
+    seconds = 30
+  } else if (seconds === 0) {
     seconds = 0
   } else {
-    seconds = seconds > 45 ? (seconds = 45) : seconds
+    seconds = seconds !== 30 ? (seconds = 30) : seconds
   }
 
   state.defaultMinutes = minutes
@@ -112,6 +116,10 @@ export function editCountdown() {
           secondsElement.setAttribute("contenteditable", false)
 
           if (Number(minutesElement.innerText) === 60) {
+            secondsElement.innerText = "00"
+          } else if (Number(minutesElement.innerText) === 0) {
+            secondsElement.innerText = "30"
+          } else if (Number(secondsElement.innerText) === 0) {
             secondsElement.innerText = "00"
           } else if (Number(secondsElement.innerText) !== 30) {
             secondsElement.innerText = "30"
