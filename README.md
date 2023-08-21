@@ -42,13 +42,13 @@ Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figm
 
 O projeto tinha como propósito desenvolver um timer no estilo Pomodoro com JavaScript e ES Modules, incluindo funcionalidades de iniciar, pausar, reiniciar e ajustar o contador. Além disso, buscava fornecer opções de tema claro/escuro, controle de música e suporte à acessibilidade.
 
-Você tem a opção de personalizar o valor padrão do Focus Timer (25:00) acessando o arquivo [main.js](https://github.com/kauankarvalho/Focus-Timer/blob/main/src/main.js) e fornecendo um novo valor como argumento:
+Você tem a opção de personalizar o valor padrão do Focus Timer (25:00) ao acessar o arquivo [main.js](https://github.com/kauankarvalho/Focus-Timer/blob/main/src/main.js). Simplesmente forneça um novo valor como argumento para a função focusTimer para ajustá-lo de acordo com suas preferências.
 
 ```
 focusTimer(minutes, seconds)
 ```
 
-O Focus timer possui um validador que restringe os minutos a um limite máximo de 60, enquanto os segundos podem ser ajustados em incrementos de 30 segundos.
+O Focus Timer possui um validador que restringe os minutos a um limite máximo de 60, enquanto os segundos podem ser ajustados em incrementos de 30 segundos.
 
 ## 🧪 Tecnologias
 
