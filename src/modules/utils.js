@@ -16,7 +16,7 @@ export function updateElementAccessibility(object) {
 }
 
 export function hasTwoItems(element) {
-  return element.length == 2
+  return element.length >= 2
 }
 
 export function hasTwoDigits(element) {

@@ -79,7 +79,7 @@ export function editCountdown() {
 
   let editingInterval
 
-  editingInterval = setInterval(checkEditing, 1)
+  editingInterval = setInterval(checkEditing, 500)
 
   function checkEditing() {
     const minutesElement = timerNumber.minutes
@@ -107,17 +107,16 @@ export function editCountdown() {
     } else if (!isEditingSeconds) {
       secondsElement.focus()
 
-      if (Number(minutesElement.innerText) === 60) {
-        secondsElement.innerText = "00"
-      }
-
       if (hasTwoItems(secondsElement.innerText)) {
         if (hasTwoDigits(secondsElement.innerText)) {
           secondsElement.setAttribute("contenteditable", false)
 
-          if (Number(secondsElement.innerText) > 45) {
-            secondsElement.innerText = "45"
+          if (Number(minutesElement.innerText) === 60) {
+            secondsElement.innerText = "00"
+          } else if (Number(secondsElement.innerText) > 30) {
+            secondsElement.innerText = "30"
           }
+
           state.defaultSeconds = Number(secondsElement.innerText)
           updateTimerState()
 
