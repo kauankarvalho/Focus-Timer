@@ -113,7 +113,7 @@ export function editCountdown() {
 
           if (Number(minutesElement.innerText) === 60) {
             secondsElement.innerText = "00"
-          } else if (Number(secondsElement.innerText) > 30) {
+          } else if (Number(secondsElement.innerText) !== 30) {
             secondsElement.innerText = "30"
           }
 
