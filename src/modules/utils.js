@@ -15,7 +15,10 @@ export function updateElementAccessibility(object) {
   }
 }
 
-export function isTwoDigitNumber(element) {
-  const teste = element.split("")
-  return teste.length === 2
+export function hasTwoItems(element) {
+  return element.length == 2
+}
+
+export function hasTwoDigits(element) {
+  return /\d\d/.test(element)
 }

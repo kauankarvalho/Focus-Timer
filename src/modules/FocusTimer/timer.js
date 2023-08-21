@@ -1,7 +1,7 @@
+import { hasTwoItems, hasTwoDigits } from "../utils.js"
 import { togglePlayAndPause } from "./actions.js"
 import { kitchenTimerAudio } from "./sounds.js"
 import { timerNumber } from "./timer-number.js"
-import { isTwoDigitNumber } from "../utils.js"
 import { state } from "./state.js"
 
 export function updateTimerState(minutes, seconds) {
@@ -74,9 +74,6 @@ export function editCountdown() {
   timerNumber.minutes.setAttribute("contenteditable", true)
   timerNumber.seconds.setAttribute("contenteditable", true)
 
-  timerNumber.minutes.onkeypress = (event) => /\d/.test(event.key)
-  timerNumber.seconds.onkeypress = (event) => /\d/.test(event.key)
-
   timerNumber.minutes.innerText = ""
   timerNumber.seconds.innerText = ""
 
@@ -91,17 +88,21 @@ export function editCountdown() {
     if (!isEditingMinutes) {
       minutesElement.focus()
 
-      if (isTwoDigitNumber(minutesElement.innerText)) {
-        minutesElement.setAttribute("contenteditable", false)
+      if (hasTwoItems(minutesElement.innerText)) {
+        if (hasTwoDigits(minutesElement.innerText)) {
+          minutesElement.setAttribute("contenteditable", false)
 
-        if (Number(minutesElement.innerText) > 60) {
-          minutesElement.innerText = "60"
+          if (Number(minutesElement.innerText) > 60) {
+            minutesElement.innerText = "60"
+          }
+          state.defaultMinutes = Number(minutesElement.innerText)
+          updateTimerState()
+
+          minutesElement.blur()
+          isEditingMinutes = true
+        } else {
+          minutesElement.innerText = ""
         }
-        state.defaultMinutes = Number(minutesElement.innerText)
-        updateTimerState()
-
-        minutesElement.blur()
-        isEditingMinutes = true
       }
     } else if (!isEditingSeconds) {
       secondsElement.focus()
@@ -110,17 +111,21 @@ export function editCountdown() {
         secondsElement.innerText = "00"
       }
 
-      if (isTwoDigitNumber(secondsElement.innerText)) {
-        secondsElement.setAttribute("contenteditable", false)
+      if (hasTwoItems(secondsElement.innerText)) {
+        if (hasTwoDigits(secondsElement.innerText)) {
+          secondsElement.setAttribute("contenteditable", false)
 
-        if (Number(secondsElement.innerText) > 45) {
-          secondsElement.innerText = "45"
+          if (Number(secondsElement.innerText) > 45) {
+            secondsElement.innerText = "45"
+          }
+          state.defaultSeconds = Number(secondsElement.innerText)
+          updateTimerState()
+
+          secondsElement.blur()
+          isEditingSeconds = true
+        } else {
+          secondsElement.innerText = ""
         }
-        state.defaultSeconds = Number(secondsElement.innerText)
-        updateTimerState()
-
-        secondsElement.blur()
-        isEditingSeconds = true
       }
     } else {
       isEditing = false
