@@ -98,6 +98,8 @@ export function editCountdown() {
 
           if (Number(minutesElement.innerText) > 60) {
             minutesElement.innerText = "60"
+          } else if (Number(minutesElement.innerText) === 0) {
+            minutesElement.innerText = "00"
           }
           state.defaultMinutes = Number(minutesElement.innerText)
           updateTimerState()
