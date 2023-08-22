@@ -36,7 +36,8 @@ Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figm
 - Dominei Nullish Coalescing Operator;
 - Apliquei meus conhecimentos em ES Modules na prática;
 - Refinei minha compreensão sobre Clean Code;
-- Adquiri novos conceitos relacionados à acessibilidade.
+- Adquiri novos conceitos relacionados à acessibilidade;
+- Aprendi a utilização de destructuring no JavaScript.
 
 ## 💻 Projeto
 
