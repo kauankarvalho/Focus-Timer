@@ -1,4 +1,4 @@
-import { hasTwoItems, hasTwoDigits } from "../utils.js"
+import { hasTwoItems, hasTwoDigits } from "../../utils.js"
 import { togglePlayAndPause } from "./actions.js"
 import { kitchenTimerAudio } from "./sounds.js"
 import { timerNumber } from "./timer-number.js"

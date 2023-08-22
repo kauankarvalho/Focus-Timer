@@ -1,5 +1,5 @@
 import { playAndPause, editAndReset, speaker } from "./controls.js"
-import * as utils from "../utils.js"
+import * as utils from "../../utils.js"
 import { state } from "./state.js"
 
 export function togglePlayAndPause() {
