@@ -56,8 +56,9 @@ O Focus Timer possui um validador que restringe os minutos a um limite máximo d
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-- [Tailwind CSS](https://tailwindcss.com)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Prettier](https://prettier.io)
 
 ## ✒️ Referências
 
