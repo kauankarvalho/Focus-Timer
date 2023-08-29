@@ -1,3 +1,4 @@
+import { playAndPause, editAndReset, speaker } from "./controls.js"
 import { hasTwoItems, hasTwoDigits } from "../../utils.js"
 import { togglePlayAndPause } from "./actions.js"
 import { kitchenTimerAudio } from "./sounds.js"
@@ -67,11 +68,7 @@ export function resetCountdown() {
   updateDisplay()
 }
 
-export let isEditing = false
-
 export function editCountdown() {
-  isEditing = true
-
   let isEditingMinutes = false
   let isEditingSeconds = false
 
@@ -80,6 +77,10 @@ export function editCountdown() {
 
   timerNumber.minutes.innerText = ""
   timerNumber.seconds.innerText = ""
+
+  playAndPause.element.setAttribute("disabled", "")
+  editAndReset.element.setAttribute("disabled", "")
+  speaker.element.setAttribute("disabled", "")
 
   let editingInterval
 
@@ -137,7 +138,10 @@ export function editCountdown() {
         }
       }
     } else {
-      isEditing = false
+      playAndPause.element.removeAttribute("disabled")
+      editAndReset.element.removeAttribute("disabled")
+      speaker.element.removeAttribute("disabled")
+
       clearInterval(editingInterval)
     }
   }

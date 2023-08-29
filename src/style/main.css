@@ -2,28 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+:disabled {
+  cursor: no-drop;
+  opacity: 0.5;
+}
+
 @layer utilities {
   .play {
-    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/play.svg)] bg-center bg-contain;
+    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/play.svg)] bg-contain bg-center;
   }
 
   .pause {
-    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/pause.svg)] bg-center bg-contain;
+    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/pause.svg)] bg-contain bg-center;
   }
 
   .edit {
-    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/edit.svg)] bg-center bg-contain;
+    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/edit.svg)] bg-contain bg-center;
   }
 
   .reset {
-    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/reset.svg)] bg-center bg-contain;
+    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/reset.svg)] bg-contain bg-center;
   }
 
   .speaker-none {
-    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/speaker-none.svg)] bg-center bg-contain;
+    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/speaker-none.svg)] bg-contain bg-center;
   }
 
   .speaker-high {
-    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/speaker-high.svg)] bg-center bg-contain;
+    @apply h-[6.4rem] w-[6.4rem] bg-[url(../src/assets/icons/speaker-high.svg)] bg-contain bg-center;
   }
 }
