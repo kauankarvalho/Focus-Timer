@@ -15,6 +15,14 @@ export function updateElementAccessibility(object) {
   }
 }
 
+export function toggleDisabledAttribute(element) {
+  if (element.hasAttribute("disabled")) {
+    element.removeAttribute("disabled")
+  } else {
+    element.setAttribute("disabled", "")
+  }
+}
+
 export function hasTwoItems(element) {
   return element.length >= 2
 }

@@ -1,5 +1,6 @@
 import { playAndPause, editAndReset, speaker } from "./controls.js"
 import { hasTwoItems, hasTwoDigits } from "../../utils.js"
+import { toggleDisabledAttribute } from "../../utils.js"
 import { togglePlayAndPause } from "./actions.js"
 import { kitchenTimerAudio } from "./sounds.js"
 import { timerNumber } from "./timer-number.js"
@@ -78,9 +79,9 @@ export function editCountdown() {
   timerNumber.minutes.innerText = ""
   timerNumber.seconds.innerText = ""
 
-  playAndPause.element.setAttribute("disabled", "")
-  editAndReset.element.setAttribute("disabled", "")
-  speaker.element.setAttribute("disabled", "")
+  toggleDisabledAttribute(playAndPause.element)
+  toggleDisabledAttribute(editAndReset.element)
+  toggleDisabledAttribute(speaker.element)
 
   let editingInterval
 
@@ -138,10 +139,10 @@ export function editCountdown() {
         }
       }
     } else {
-      playAndPause.element.removeAttribute("disabled")
-      editAndReset.element.removeAttribute("disabled")
-      speaker.element.removeAttribute("disabled")
-
+      toggleDisabledAttribute(playAndPause.element)
+      toggleDisabledAttribute(editAndReset.element)
+      toggleDisabledAttribute(speaker.element)
+      
       clearInterval(editingInterval)
     }
   }
