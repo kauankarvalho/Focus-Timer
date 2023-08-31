@@ -43,7 +43,10 @@ function countdown() {
 
   if (state.minutes === 0 && state.seconds === 0) {
     kitchenTimerAudio.play()
+
     togglePlayAndPause()
+    toggleDisabledAttribute(playAndPause.element)
+
     clearInterval(countdownInterval)
   }
 

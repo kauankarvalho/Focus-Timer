@@ -1,20 +1,19 @@
 import { playAndPause, editAndReset, speaker } from "./controls.js"
 import { buttonPressAudio, bgMusicAudio } from "./sounds.js"
+import { toggleDisabledAttribute } from "../../utils.js"
 import * as countdown from "./timer.js"
 import * as action from "./actions.js"
 import { state } from "./state.js"
 
 export function initEventListeners() {
   playAndPause.element.addEventListener("click", () => {
-    if (state.minutes !== 0 || state.seconds !== 0) {
-      buttonPressAudio.play()
-      action.togglePlayAndPause()
+    buttonPressAudio.play()
+    action.togglePlayAndPause()
 
-      if (state.isRunning) {
-        countdown.startCountdown()
-      } else {
-        countdown.stopCountdown()
-      }
+    if (state.isRunning) {
+      countdown.startCountdown()
+    } else {
+      countdown.stopCountdown()
     }
   })
 
@@ -23,6 +22,10 @@ export function initEventListeners() {
     const isResetButton = editAndReset.element.classList.contains("reset")
 
     if (isResetButton) {
+      if (state.minutes === 0 && state.seconds === 0) {
+        toggleDisabledAttribute(playAndPause.element)
+      }
+
       countdown.resetCountdown()
       action.toggleEditAndReset()
     } else {
