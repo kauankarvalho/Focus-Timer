@@ -1,14 +1,8 @@
 {
   "name": "focus-timer",
-  "version": "",
-  "description": "",
-  "main": "",
   "scripts": {
-    "tailwindcss": "npx tailwindcss -i ./src/style/main.css -o ./dist/style.css --watch"
+    "tailwindcss": "pnpm exec tailwindcss -i ./src/style/main.css -o ./dist/style.css --watch"
   },
-  "keywords": [],
-  "author": "Kauan Carvalho",
-  "license": "MIT",
   "devDependencies": {
     "prettier": "^3.0.1",
     "prettier-plugin-tailwindcss": "^0.4.1",
